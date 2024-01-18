@@ -9,7 +9,7 @@
     --font-family-header: "HK Grotesk";
   }
   
-  /* Basic page style resets */
+  
   * {
     box-sizing: border-box;
   }
@@ -89,9 +89,6 @@
   .divider {
     padding: 0 1rem;
   }
-  /******************************************************************************
-  END Glitch hello-app default styles
-  ******************************************************************************/
   
   body {
     font-family: HK Grotesk;
@@ -114,7 +111,7 @@
   
   /* Very light scaling for our illustration */
   .title {
-    color: #2800FF;
+    color: #FFFFFF;
     font-family: HK Grotesk;
     font-style: normal;
     font-weight: bold;
@@ -148,10 +145,7 @@
     transition: 500ms;
   }
   
-  /* Subheading */
-  h2 {
-    color: #2800FF;
-  }
+ 
   
   /* Interactive image */
   .illustration:active {
