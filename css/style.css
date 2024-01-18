@@ -16,6 +16,12 @@
   [hidden] {
     display: none !important;
   }
+
+  .profile {
+    max-width: 100%;
+    max-height: var(--image-max-width);
+    margin-top: var(--image-margin);
+  }
   
   /* Import fonts */
   @font-face {
@@ -93,6 +99,7 @@
   body {
     font-family: HK Grotesk;
     background-color: var(--color-bg);
+    color: var(--color-text-main);
   }
   
   /* Page structure */
