@@ -1,24 +1,78 @@
-:root {
-    --color-bg: #00008B;
-    --color-text-main: #FFFFFF;
-    --color-primary: #FFFF00;
-    --wrapper-height: 87vh;
-    --image-max-width: 300px;
-    --image-margin: 3rem;
-}
-  
-  
+@charset "utf-8";
 
+.site-header{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    background-color: #FFFFFF;
+    color: #00008B;
+    justify-content: space-between;
+    padding: 60px 20px;
+    position: fixed;
+    align-items: center;
+}
+
+.gnavi_menu{
+    display: flex;
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+}
+
+
+nav{
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    place-items: center;
+    background-color:deeppink;
+}
+
+nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background-color: aliceblue;
+    place-items: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    display: block;
+    padding: 30px;
+}
 
 .profile {
-    width: 200px;
+    width: 100%;
     height: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.profile img{
+    width: 300px;
+    height: auto;
+    margin-bottom: 30px;;
+}
+
+.myname{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
 
   
 body {
-    background-color: var(--color-bg);
-    color: var(--color-text-main);
+    background-color:#00008B;
+    color:#FFFFFF;
+    font-size: 2.0rem;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
   
 /* Page structure */
