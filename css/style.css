@@ -1,19 +1,58 @@
 @charset "utf-8";
 
-.site-header{
-    width: 100%;
-    height: 35px;
-    display: flex;
-    background-color: #FFFFFF;
-    color: #00008B;
-    justify-content: space-between;
-    padding: 60px 20px;
-    position: fixed;
-    align-items: center;
+* {
+    box-sizing: border-box;
+}
+ 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+    background-color:#00008B;
+    color: deeppink;
 }
 
-.gnavi_menu{
+header {
+    width: 100%; 
+    background-color: #fff;
+    position: fixed;
+    top: 0;
     display: flex;
+    align-items: center;
+    border-bottom: 3px solid deeppink;
+}
+
+h1{
+    padding: 0px 30px;
+    font-size: 32px;
+}
+
+a{	
+    text-decoration: none;
+    color: #4b4b4b;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    padding: 0px 30px;
+}
+
+a:hover{
+    color: deeppink;
+    font-size: 120%;
+}
+
+li{
+    margin: 0 0 0 19px;
+   font-size: 20px;
+}
+
+
+
+nav{
+    margin: 0 0 0 auto;
 }
 
 .hero img{
@@ -21,30 +60,6 @@
     height: auto;
 }
 
-
-nav{
-    width: 100%;
-    height: auto;
-    margin-left: 0;
-    place-items: center;
-    background-color:deeppink;
-}
-
-nav ul{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    background-color: aliceblue;
-    place-items: center;
-}
-
-nav ul li a{
-    text-decoration: none;
-    display: block;
-    padding: 30px;
-}
 
 .profile {
     width: 100%;
@@ -65,16 +80,7 @@ nav ul li a{
     padding: 0;
 }
 
-  
-body {
-    background-color:#00008B;
-    color:#FFFFFF;
-    font-size: 2.0rem;
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-}
-  
+
 /* Page structure */
 .wrapper {
     min-height: var(--wrapper-height);
@@ -99,3 +105,5 @@ body {
     line-height: 105%;
     margin: 0;
 }
+
+
