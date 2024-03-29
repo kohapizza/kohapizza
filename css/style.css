@@ -8,12 +8,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: system-ui;
-    background-color:#00008B;
     color: deeppink;
 }
 
 header {
-    width: 100%; 
+    width: 100%;
+    height: 100px;
     background-color: #fff;
     position: fixed;
     top: 0;
@@ -22,13 +22,32 @@ header {
     border-bottom: 3px solid deeppink;
 }
 
+.blank{
+    margin-top: 0px;
+    height: 80px;
+}
+
 h1{
-    padding: 0px 30px;
     font-size: 32px;
+}
+
+h1,h2,h3,p{
+    padding: 0px 70px;
+}
+
+
+h3{
+    font-weight: 300;
+    margin-top: 1px;
+    margin-bottom: 1px;
 }
 
 a{	
     text-decoration: none;
+    color: #4b4b4b;
+}
+
+header nav ul li a{
     color: #4b4b4b;
 }
 
@@ -39,7 +58,7 @@ ul{
     padding: 0px 30px;
 }
 
-a:hover{
+header nav ul li a:hover{
     color: deeppink;
     font-size: 120%;
 }
@@ -49,15 +68,43 @@ li{
    font-size: 20px;
 }
 
-
-
 nav{
     margin: 0 0 0 auto;
 }
 
-.hero img{
-    width: 100%;
-    height: auto;
+.education,.experience,.skills{
+    background-color: #FFE4E1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.education h1{
+    font-size: 45px;
+}
+
+.aboutme h1{
+    font-size: 45px;
+}
+
+.skills h1{
+    font-size: 45px;
+}
+
+.experience h1{
+    font-size: 45px;
+}
+
+.aboutme{
+    padding-bottom: 30px;
+}
+
+.article{
+    padding-top: 35px;
+}
+
+.skills{
+    background-color: #FFFFFF;
+    padding-bottom: 70px;
 }
 
 
@@ -68,17 +115,39 @@ nav{
     margin-bottom: 30px;
 }
 
-.profile img{
-    width: 300px;
+.aboutme img{
+    width: 360px;
     height: auto;
-    margin-bottom: 30px;;
+    margin-left: 80px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
 }
 
-.myname{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 0;
+.aboutme_items{
+    display: flex;
 }
+
+.myicon{
+    width: 40%;
+}
+
+.aboutme_txt{
+    width: 60%;
+}
+
+.aboutme{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+.aboutme_tit_name{
+    margin-top: 0px;
+}
+
+
 
 
 /* Page structure */
