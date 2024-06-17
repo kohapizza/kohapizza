@@ -10,13 +10,13 @@
 
 <img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=python,haskell,swift,c,java,javascript,php,ocaml" />
 
-<h3 align="left">Technologies I've used:</h3>
-
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,wordpress,pr,figma,postgres,django,emacs,jquery,mysql,vscode" />
-
 <h3 align="left">Markup Languages:</h3>
 
 <img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=html,css" />
+
+<h3 align="left">Technologies I've used:</h3>
+
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,wordpress,pr,figma,postgres,django,emacs,jquery,mysql,vscode" />
 
 <h3 align="center">Connect with me</h3>
 
