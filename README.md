@@ -1,4 +1,4 @@
-<h1 align="center">I'm Koharu!</h1>
+<h1 align="center">❤️‍🔥Hi, I'm Koharu!❤️‍🔥</h1>
 <h3 align="center">🥁Japanese Drummer/Computer Science Student👩‍💻</h3>
 
 <p align="center">
