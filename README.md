@@ -3,7 +3,7 @@
 
 <p align="center">
 <img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kohapizza&layout=donut&theme=radical&bg_color=0D1117&hide_border=true" />
-<img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api?username=kohapizza&theme=radical&bg_color=0D1117&hide_border=true" />
+<img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api?username=kohapizza&theme=radical&bg_color=0D1117&hide_border=true&count_private=true" />
 
 </p>
 
