@@ -291,7 +291,7 @@ section a {
 
   .box {
     align-items: center;
-    display: block; /* 子要素を上下中央に揃える */
+    display: block;
     padding-left: 5%;
     padding-right: 5%;
   }
@@ -312,5 +312,23 @@ section a {
     border-radius: 10px;
   }
 
+  /* skill */
+  .skillInfo {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 5%;
+    vertical-align: top;
+  }
+  
+  .skillInfo p:first-child {
+    width: 40%;
+    text-align: right;
+  }
+  
+  .skillInfo p:nth-child(2) {
+    width: 60%;
+    text-align: left;
+  }
 }
 
