@@ -297,14 +297,12 @@ section a {
   }
 
   .introImg {
-    background-color: #ff69b4;
     align-items: center;
     width: 100%;
   }
 
   .introBox {
     width: 100%;
-    background-color: aqua;
   }
 
   .introImg img {
