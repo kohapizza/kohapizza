@@ -12,3 +12,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+const responsive_menu_btn = document.querySelector('.responsive_btn');
+responsive_menu_btn.addEventListener('click', menuToggle);
+
+function menuToggle() {
+    const nav = document.querySelector('header nav');
+    nav.classList.toggle('menu_active');
+    
+    // ボタンのマークを切り替え
+    if (nav.classList.contains('menu_active')) {
+        responsive_menu_btn.textContent = '×';
+    } else {
+        responsive_menu_btn.textContent = '☰';
+    }
+}
+
+document.querySelectorAll('header nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        const nav = document.querySelector('header nav');
+        nav.classList.remove('menu_active');
+
+        // ボタンのマークを切り替え
+        if (nav.classList.contains('menu_active')) {
+            responsive_menu_btn.textContent = '×';
+        } else {
+            responsive_menu_btn.textContent = '☰';
+        }
+    });
+});
+
