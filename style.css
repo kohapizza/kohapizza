@@ -1,6 +1,13 @@
+/* font */
+@font-face {
+  font-family: "myfont"; 
+  src: url("fonts/TsukushiAMaruGothic.ttc") format("truetype");
+  font-display: swap;
+}
+
 /* 全体のスタイル */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "myfont",sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -12,7 +19,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #ffcccb;
+  background-color: #ff69b4;
   padding: 20px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -40,32 +47,97 @@ header nav ul li a {
 
 header nav ul li a:hover {
   background-color: #fff;
-  color: #ffcccb;
+  color: #ff69b4;
 }
+
+/* フッター */
+footer {
+  text-align: center;
+  background-color: #ff69b4;
+  color: #fff;
+  padding: 10px 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer ul li {
+  margin: 0 15px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+footer ul li a:hover {
+  background-color: #fff;
+  color: #ff69b4;
+}
+
+#sky a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
 
 /* セクション */
 main {
   margin-top: 30px;
   padding: 0px;
+  text-align: center;
 }
 
 section {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
 section h1 {
   color: #ff69b4;
+  font-size:xx-large;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
-#sky h1 {
-  color: #fff;
+section h2 {
+  font-size: xx-large;
+}
+
+section hr {
+  width: 60%;
+  height: 1px;
+  border: none;
+  border-top: 2px #ff69b4 solid;
+  margin-bottom: 40px;
+}
+
+#aboutme {
+  width: 50%;
+}
+
+#aligned {
+  display: flex;
+  align-items: center; /* 垂直方向に中央揃え */
+  justify-content: center; /* 水平方向に中央揃え */
+  text-align: center;
+}
+
+#aligned p {
+  background-color: aqua;
 }
 
 #about img {
   display: block;
-  max-width: 150px;
+  max-width: 300px;
   border-radius: 50%;
   margin: 0 auto;
 }
@@ -80,35 +152,6 @@ section ul li {
   margin: 5px 0;
 }
 
-/* フッター */
-footer {
-  text-align: center;
-  background-color: #ffcccb;
-  color: #fff;
-  padding: 10px 0;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0 0 0;
-  display: flex;
-  justify-content: center;
-}
-
-footer ul li {
-  margin: 0 10px;
-}
-
-footer ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-footer ul li a:hover {
-  color: #333;
-}
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
@@ -121,45 +164,75 @@ footer ul li a:hover {
   }
 }
 
-
-/* #skyセクションの背景画像設定 */
 #sky {
-  position: relative;
   width: 100%;
-  height: 800px;
-  background: url('photos/sky.jpg') no-repeat center center/cover;
-}
-
-/* オーバーレイ用のスタイル */
-#sky .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-}
-
-/* 見出しスタイル */
-#sky .overlay h1 {
-  font-size: 5rem;
+  height: 100vh; /* ビューポート全体の高さ */
   margin: 0;
+  padding: 0;
+  overflow: hidden; /* 内容がはみ出さないようにする */
+  position: relative; /* 必要に応じて調整 */
+}
+
+.box {
+  display: flex; /* フレックスボックスで子要素を横並びにする */
+  align-items: center; /* 子要素を上下中央に揃える */
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.introBox {
+  width: 60%;
+}
+
+.introImg {
+  width: 40%;
+  text-align: right;
+}
+
+.introImg img {
+  width: 450px; /* プロフィール画像の横幅を指定（任意） */
+  height: auto; /* アスペクト比を維持 */
+  border-radius: 10px; /* 角を少し丸くする（任意） */
+  text-align: right;
+}
+
+.skillInfo {
+  display: flex;
+  padding-left: 25%;
+  padding-right: 20%;
+  gap: 5%;
+  vertical-align: top;
+}
+
+.skillInfo p:first-child {
+  width: 40%;
+  text-align: right;
+}
+
+.skillInfo p:nth-child(2) {
+  width: 60%;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  gap: 3%;
+  vertical-align: top;
+}
+
+.info p:first-child {
+  width: 40%;
+  text-align: right;
+}
+
+.info p:nth-child(2) {
+  width: 60%;
+  text-align: left;
+}
+
+section a {
+  color: #ff69b4;
   font-weight: bold;
-}
-
-/* スクロールヒントスタイル */
-#sky .overlay .scroll-hint {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  animation: fadeInOut 2s infinite;
-}
-
-/* スクロールヒントのアニメーション */
-@keyframes fadeInOut {
-  0%, 100% {
-      opacity: 1;
-  }
-  50% {
-      opacity: 0.5;
-  }
 }
