@@ -243,11 +243,11 @@ section a {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
+  /* header */
   .responsive_btn {
     display: flex;
   }
 
-  /* js function "menuToggle" starting only */
   .menu_active {
     right: 0;
   }
@@ -283,7 +283,36 @@ section a {
     font-size: 20px;
   }
 
-  
+  /* About me */
+
+  #aboutme {
+    width: 90%;
+  }
+
+  .box {
+    align-items: center;
+    display: block; /* 子要素を上下中央に揃える */
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .introImg {
+    background-color: #ff69b4;
+    align-items: center;
+    width: 100%;
+  }
+
+  .introBox {
+    width: 100%;
+    background-color: aqua;
+  }
+
+  .introImg img {
+    align-items: center;
+    width: 450px;
+    height: auto;
+    border-radius: 10px;
+  }
 
 }
 
