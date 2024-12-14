@@ -3,7 +3,8 @@
 
 <p align="center">
 <img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kohapizza&layout=donut&theme=radical&bg_color=0D1117&hide_border=true" />
-<img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api?username=kohapizza&theme=radical&bg_color=0D1117&hide_border=true" />
+<img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api?username=kohapizza&theme=radical&bg_color=0D1117&hide_border=true&count_private=true" />
+
 </p>
 
 <h3 align="left">Programming Languages:</h3>
@@ -16,7 +17,7 @@
 
 <h3 align="left">Technologies I've used:</h3>
 
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,wordpress,pr,figma,postgres,django,emacs,jquery,mysql,vscode" />
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,wordpress,docker,pr,figma,postgres,django,emacs,jquery,mysql,vscode" />
 
 <h3 align="center">Connect with me</h3>
 
