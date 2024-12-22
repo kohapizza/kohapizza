@@ -47,7 +47,6 @@
           1000
         );
 
-
           if (window.matchMedia("(max-width: 768px)").matches) {
             // スマホ向けの処理
             camera.position.set(0, 0, 12);
@@ -60,8 +59,7 @@
           // テクスチャローダーを作成
           const textureLoader = new THREE.TextureLoader();
 
-          // 背景画像 (sky.jpg) をロードしてシーンの背景に設定
-          textureLoader.load('photos/sky.jpg', (texture) => {
+          textureLoader.load('photos/kawaii2.jpg', (texture) => {
             scene.background = texture;
           });
 
@@ -105,12 +103,6 @@
             0.4,
             0.85
           );
-
-          composer.addPass(bloomPass);
-
-          // Bloomを特定のオブジェクトに適用する
-          const bloomLayer = new THREE.Layers();
-          bloomLayer.set(1); // レイヤーID 1 を使用
 
           // アニメーションのためのクロック
           const clock = new THREE.Clock();
@@ -325,8 +317,19 @@
               <p>Hardware Hackathon @ Google Japan</p>
             </div>
             <div class="info">
+              <p>2024/09</p>
+              <p>Interviewed by a music writer Dr.Funkshitteru about my band
+                <br>🥁 <a href="https://note.com/drfunk/n/na2c3186dd314">Interview article 1</a>
+                <br>🥁 <a href="https://note.com/drfunk/n/n01c8bbb3d3c0?magazine_key=m7b7c9e4d763f">Interview article 2</a>
+              </p>
+            </div>
+            <div class="info">
               <p>2024/11</p>
               <p><a href="https://youtu.be/dDi6OWGKgWY">LT(Lightning Talk)</a> @ Waffle College</p>
+            </div>
+            <div class="info">
+              <p>2024/12</p>
+              <p>Generative AI Hackathon @ <a href="https://ut-base.info/circles/148">TOMOSHIBI / 灯</a></p>
             </div>
           </div>       
         </section>
