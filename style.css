@@ -203,20 +203,41 @@ section ul li {
   text-align: left;
 }
 
-.info {
-  display: flex;
+.info{
   padding-left: 10%;
   padding-right: 10%;
   gap: 3%;
   vertical-align: top;
 }
 
-.info p:first-child {
+.date_and_title {
+  display: flex;
+  gap: 3%;
+  vertical-align: top;
+}
+
+.detailed {
+  display: flex;
+  gap: 3%;
+  vertical-align: top;
+}
+
+.date_and_title p:first-child {
   width: 40%;
   text-align: right;
 }
 
-.info p:nth-child(2) {
+.dummy {
+  width: 40%;
+  text-align: right;
+}
+
+.date_and_title p:nth-child(2) {
+  width: 60%;
+  text-align: left;
+}
+
+.detailed_description {
   width: 60%;
   text-align: left;
 }
@@ -332,7 +353,7 @@ section a {
   }
 
   /* info */
-  .info {
+  .date_and_title {
     display: flex;
     padding-left: 5%;
     padding-right: 5%;
@@ -340,12 +361,12 @@ section a {
     vertical-align: top;
   }
   
-  .info p:first-child {
+  .date_and_title p:first-child {
     width: 40%;
     text-align: right;
   }
   
-  .info p:nth-child(2) {
+  .date_and_title p:nth-child(2) {
     width: 60%;
     text-align: left;
   }

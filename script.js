@@ -41,3 +41,21 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
     });
 });
 
+// button for detailed descriptions
+const description_btn = document.querySelector('.description_btn');
+description_btn.addEventListener('click', toggle);
+
+const detailed_description = document.querySelector('.detailed_description')
+
+function toggle() {
+    const detailed_description = document.querySelector('.info .detailed_description');
+    detailed_description.classList.toggle('active');
+    
+    // ボタンのマークを切り替え, 詳細テキストの表示/非表示
+    if (detailed_description.classList.contains('active')) {
+        description_btn.textContent = '∨';
+        // detailed_descriptionを非表示
+    } else {
+        description_btn.textContent = '∧';
+    }
+}
