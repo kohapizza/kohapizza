@@ -6,149 +6,8 @@
     <meta name="format-detection" content="telephone=no">
     <title>Koharu Saeki / 佐伯 小遥</title>
     <link rel="stylesheet" href="style.css">
-    <script type="importmap">
-        {
-          "imports": {
-            "three": "https://unpkg.com/three@v0.151.3/build/three.module.js",
-            "three/addons/": "https://unpkg.com/three@v0.151.3/examples/jsm/"
-          }
-        }
-    </script>
 </head>
 <body>
-    <script type="module">
-        import * as THREE from 'three';
-        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-        import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
-        import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
-        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
-
-        function responsiveBehavior() {
-          // skyセクション
-        const skySection = document.getElementById('sky');
-        
-        // サイズを取得
-        const sizes = {
-          width: skySection.offsetWidth,
-          height: skySection.offsetHeight,
-        };
-
-        // シーンを作成する
-        const scene = new THREE.Scene();
-
-        // カメラを作成する
-        const camera = new THREE.PerspectiveCamera(
-          75,
-          sizes.width / sizes.height,
-          0.1,
-          1000
-        );
-
-          if (window.matchMedia("(max-width: 768px)").matches) {
-            // スマホ向けの処理
-            camera.position.set(0, 0, 12);
-             
-          } else {
-            // PC向けの処理
-            camera.position.set(0, 0, 5);
-          }
-
-          // テクスチャローダーを作成
-          const textureLoader = new THREE.TextureLoader();
-
-          textureLoader.load('photos/kawaii2.jpg', (texture) => {
-            scene.background = texture;
-          });
-
-          // レンダラーを作成する
-          const renderer = new THREE.WebGLRenderer({ antialias: true });
-
-          renderer.setSize(sizes.width, sizes.height);
-          renderer.setPixelRatio(window.devicePixelRatio);
-          skySection.appendChild(renderer.domElement);
-
-          // コントロールを追加する
-          const controls = new OrbitControls(camera, renderer.domElement);
-          controls.enabled = true; // 操作を無効化
-          controls.update();
-
-          // AmbientLightを追加する
-          const ambientLight = new THREE.AmbientLight(0xffffff, 2);
-          scene.add(ambientLight);
-
-          // HDRI環境マップのロード
-          const rgbeLoader = new RGBELoader();
-          rgbeLoader.load('rustig_koppie_puresky_4k.hdr', (texture) => {
-            texture.mapping = THREE.EquirectangularReflectionMapping;
-            scene.environment = texture;
-          });
-
-          // GLTFLoaderを作成する
-          const loader = new GLTFLoader();
-          const dracoLoader = new DRACOLoader();
-          dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.1/');
-          loader.setDRACOLoader(dracoLoader);
-
-          // エフェクトコンポーザーを作成する
-          const composer = new EffectComposer(renderer);
-          const renderPass = new RenderPass(scene, camera);
-          composer.addPass(renderPass);
-
-          const bloomPass = new UnrealBloomPass(
-            new THREE.Vector2(sizes.width, sizes.height),
-            1.5,
-            0.4,
-            0.85
-          );
-
-          // アニメーションのためのクロック
-          const clock = new THREE.Clock();
-
-          // 3Dモデルのロード＆描画
-          loader.load('koharu4.glb',(gltf) => {
-            let mixer = new THREE.AnimationMixer(gltf.scene);
-            gltf.animations.forEach((clip) => {
-              mixer.clipAction(clip).play();
-            });
-
-            // モデルに対してレイヤーを設定
-            gltf.scene.traverse((child) => {
-              if (child.isMesh) {
-                child.layers.enable(1); // Bloom適用対象として設定
-              }
-            });
-
-            gltf.scene.scale.set(2, 2, 2);
-  
-            scene.add(gltf.scene);
-  
-            // アニメーションを更新する関数
-            function update() {
-              if (mixer) {
-                mixer.update(clock.getDelta());
-              }
-            }
-  
-            // アニメーションループ
-            renderer.setAnimationLoop(() => {
-              update();
-              composer.render();
-            });
-          },
-          undefined,
-          (error) => {
-            console.error(error);
-          }
-        );
-        }
-        
-        // 初期状態で実行
-        responsiveBehavior();
-      </script>
-
     <header>
       <div class="responsive_btn">
         ☰
@@ -157,7 +16,7 @@
         <ul>
           <li><a href="#about">About Me</a></li>
           <li><a href="#skill">Skill</a></li>
-          <li><a href="#search">Search</a></li>
+          <li><a href="#research">Research</a></li>
           <li><a href="#works">Works</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -178,7 +37,7 @@
               </div>
               <div class="introBox">
                 <h3>佐伯 小遥 / Saeki Koharu</h3>
-                <p><a href="https://www.ocha.ac.jp/index.html">お茶の水女子大学</a> 理学部情報科学科4年 <a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">戸次研究室</a> / ドラマー
+                <p><a href="https://www.ocha.ac.jp/index.html">お茶の水女子大学</a> 理学部情報科学科4年 <a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">戸次研究室</a>
                 </p>
                 <p>👩‍💻 a fourth-year bachelor's student in Computer Science, <a href="https://www.ocha.ac.jp/index.html">Ochanomizu University</a>, <a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">Bekki Lab</a>.</p>
                 <p>🥁 a Japanese drummer playing Jazz, Soul, Funk and Fusion!</p>
@@ -199,10 +58,18 @@
               </div>
             </div>
         </section>
-        <section id="search">
-          <h1>Search</h1>
+        <section id="research">
+          <h1>Research</h1>
           <hr>
-          <p>#文法開発　#形式文法　#計算言語学　#Haskell　#Yesod</p>
+          <p>#計算言語学　#自然言語処理　#理論言語学　#形式文法　#文法開発　#Haskell　#Yesod</p>
+          <div class="info">
+            <div class="date_and_title">
+              <p>2025/3/13</p>
+              <p><B><U>佐伯小遥</U></B>, 富田朝, 戸次大介. 日本語推論システムlightblueの開発環境構築に向けて. 言語処理学会第31回年次大会, 2025
+              <br>❤️‍🔥 <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf">paper</a>
+              <br>❤️‍🔥 <a href="./pdfs/NLP2025.pdf">slide</a></p>
+            </div>
+          </div>
         </section>
         <section id="works">
           <h1>Works</h1>
@@ -374,7 +241,7 @@
               </div>
               <div class="detailed">
                 <p class="dummy"></p>
-                <p class="detailed_description">初めて会った人とチーム形式で学生の課題を解決するアプリの開発をした</p>
+                <p class="detailed_description"></p>
               </div>
             </div>
             <div class="info">
@@ -384,7 +251,7 @@
               </div>
               <div class="detailed">
                 <p class="dummy"></p>
-                <p class="detailed_description">初めて会った人とチーム形式で学生の課題を解決するアプリの開発をした</p>
+                <p class="detailed_description"></p>
               </div>
             </div>
             <div class="info">
@@ -394,7 +261,7 @@
               </div>
               <div class="detailed">
                 <p class="dummy"></p>
-                <p class="detailed_description">初めて会った人とチーム形式で学生の課題を解決するアプリの開発をした</p>
+                <p class="detailed_description"></p>
               </div>
             </div>
             <div class="info">
@@ -417,7 +284,7 @@
               </div>
               <div class="detailed">
                 <p class="dummy"></p>
-                <p class="detailed_description">初めて会った人とチーム形式で学生の課題を解決するアプリの開発をした</p>
+                <p class="detailed_description"></p>
               </div>
             </div>
             <div class="info">
@@ -427,18 +294,7 @@
               </div>
               <div class="detailed">
                 <p class="dummy"></p>
-                <p class="detailed_description">初めて会った人とチーム形式で学生の課題を解決するアプリの開発をした</p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2025/03</p>
-                <p>発表 @ NLP2025</p>
-                <div class="description_btn">∨</div>
-              </div>
-              <div class="detailed">
-                <p class="dummy"></p>
-                <p class="detailed_description">詳しいテキスト</p>
+                <p class="detailed_description"></p>
               </div>
             </div>
           </div>       
