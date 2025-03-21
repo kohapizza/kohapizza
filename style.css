@@ -213,13 +213,18 @@ section ul li {
 .date_and_title {
   display: flex;
   gap: 3%;
-  vertical-align: top;
+}
+
+.date_and_title p {
+  font-size: large;
 }
 
 .detailed {
   display: flex;
   gap: 3%;
-  vertical-align: top;
+  vertical-align: baseline;
+  padding-bottom: 30px;
+  padding-top: 0px;
 }
 
 .date_and_title p:first-child {
