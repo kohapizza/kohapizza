@@ -74,7 +74,72 @@
         <section id="works">
           <h1>Works</h1>
           <hr>
-          <p>WIP...</p>
+
+          <section class="works-section">
+
+            <div class="slideshow-container">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+
+                 <div class="mySlides">
+                  <video autoplay loop muted playsinline>
+                    <source src="images/express.mov" type="video/mp4"></video>
+                    <div class="project-description">
+                      <h2>express</h2>
+                      <p>"express" is a development environment and visualization tool for the multi-lingual CCG parser with DTS representations <a href="https://github.com/kohapizza/lightblue">"lightblue"</a>.
+                        This is developed using the Haskell web application framework Yesod, and provides an interactive web interface that lets users explore parsing results, expand or collapse syntactic structures, and better understand how the parser analyzes sentences.</p>
+                      <div class="button-container">
+                        <a href="https://github.com/kohapizza/express" target="_blank" class="check-button">check the project</a>
+                        <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf" target="_blank" class="check-button">check the paper</a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <img src="images/tanoren.png" alt="タノレン / tanorenn">
+                    <div class="project-description">
+                        <h2>タノレン / tanorenn</h2>
+                        <p>tanorenn is a metronome application designed to support fundamental drum practice.
+                          This marks my debut application developed with Swift, which I created and successfully released on the App Store in approximately one month.
+                          Drawing upon my personal drumming experience since elementary school, I implemented features focused on enabling efficient and effective basic practice.</p>
+                        <a href="https://apps.apple.com/jp/app/%E3%82%BF%E3%83%8E%E3%83%AC%E3%83%B3/id6504372310" target="_blank" class="check-button">check the project</a>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <img src="images/wallpaper.jpg" alt="Image Processing Application for Wallpaper Creation">
+                    <div class="project-description">
+                        <h2>Image Processing Application for Wallpaper Creation</h2>
+                        <p>This application generates unique wallpaper outputs from input images each time.
+                          The program implements fundamental image processing techniques such as binarization, gamma correction, scaling, and rotation, along with advanced image processing programs like K-Means clustering, chroma key synthesis, Virtual Studio, selective composition, and random composition.</p>
+                          <div class="button-container">
+                            <a href="https://github.com/kohapizza/ImageProcess" target="_blank" class="check-button">check the project</a>
+                            <a href="https://github.com/kohapizza/ImageProcess/blob/main/Instructions.pdf" target="_blank" class="check-button">check the instructions</a>
+                          </div>
+                    </div>
+                </div>
+
+                <div class="mySlides">
+                    <img src="images/meishikakumei.png" alt="名刺革命 / Meishi Kakumei">
+                    <div class="project-description">
+                        <h2>名刺革命 / Meishi Kakumei</h2>
+                        <p>I developed 名刺革命 / Meishi Kakumei in a team of 5 in a fast-paced environment with mentorship from industry leaders which were presented to 50+ people.
+                          We utilized JavaScript, PHP, CSS, MySQL, HTML, and Figma to develop 名刺革命 / Meishi Kakumei to help you solve the following four problems:
+                          business cards are discarded when you change departments, it is difficult to manage the business cards you receive, printing costs are high, and most students do not have business cards
+                          while collaborating and peer programming with team members.
+                        </p>
+                    </div>
+                </div>
+
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+          </section>
         </section>
         <section id="education">
             <h1>Education</h1>

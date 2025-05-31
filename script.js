@@ -12,6 +12,54 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+let slideIndex = 1; // 現在表示されているスライドのインデックス (1始まり)
+
+document.addEventListener('DOMContentLoaded', function() {
+    // ページ読み込み完了時に最初のスライドを表示
+    showSlides(slideIndex);
+});
+
+// 次へ/前へボタンがクリックされたときに呼び出される関数
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// ドットインジケーターがクリックされたときに呼び出される関数
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+// スライドを表示・非表示を切り替えるメイン関数
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    // スライドが最後の次や最初の前に行った場合の調整
+    if (n > slides.length) {
+        slideIndex = 1; // 最後のスライドの次なら最初のスライドに戻る
+    }
+    if (n < 1) {
+        slideIndex = slides.length; // 最初のスライドの前なら最後のスライドに行く
+    }
+
+    // 全てのスライドを非表示にする
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // 全てのドットから "active" クラスを削除する
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    // 現在のスライドを表示する
+    slides[slideIndex-1].style.display = "block"; // 配列のインデックスは0始まりなので -1 する
+
+    // 現在のドットに "active" クラスを追加する
+    dots[slideIndex-1].className += " active";
+}
+
 const responsive_menu_btn = document.querySelector('.responsive_btn');
 responsive_menu_btn.addEventListener('click', menuToggle);
 
@@ -40,22 +88,3 @@ document.querySelectorAll('header nav ul li a').forEach(link => {
         }
     });
 });
-
-// button for detailed descriptions
-const description_btn = document.querySelector('.description_btn');
-description_btn.addEventListener('click', toggle);
-
-const detailed_description = document.querySelector('.detailed_description')
-
-function toggle() {
-    const detailed_description = document.querySelector('.info .detailed_description');
-    detailed_description.classList.toggle('active');
-    
-    // ボタンのマークを切り替え, 詳細テキストの表示/非表示
-    if (detailed_description.classList.contains('active')) {
-        description_btn.textContent = '∨';
-        // detailed_descriptionを非表示
-    } else {
-        description_btn.textContent = '∧';
-    }
-}
