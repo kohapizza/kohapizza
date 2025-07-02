@@ -1,5 +1,5 @@
-<h1 align="center">❤️‍🔥Hi, I'm Koharu!❤️‍🔥</h1>
-<h3 align="center">🥁Japanese Drummer/Computer Science Student👩‍💻</h3>
+<h1 align="center">❤️‍🔥 Hi, I'm Koharu! ❤️‍🔥</h1>
+<h3 align="center">🥁 Japanese Drummer/Computer Science Student 👩‍💻</h3>
 
 <p align="center">
 <img alt="Top Langs" height="180px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kohapizza&layout=donut&theme=radical&bg_color=0D1117&hide_border=true" />
