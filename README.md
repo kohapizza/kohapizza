@@ -16,5 +16,5 @@
 
 <h3 align="left">Technologies I've used:</h3>
 
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,wordpress,docker,pr,figma,postgres,django,emacs,jquery,mysql,vscode" />
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,wordpress,docker,pr,figma,postgres,django,emacs,jquery,mysql,vscode,blender" />
 </p>
