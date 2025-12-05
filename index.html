@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>Koharu Saeki / 佐伯 小遥</title>
+    <meta name="description" content="佐伯小遥（Koharu Saeki）のポートフォリオ">
+    <meta property="og:title" content="Koharu Saeki / 佐伯 小遥">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-      <div class="responsive_btn">
+      <button class="responsive_btn" aria-controls="site-nav" aria-expanded="false" aria-label="メニューを開閉">
         ☰
-      </div>
-      <nav class="header_nav">
+      </button>
+      <nav id="site-nav" class="header_nav">
         <ul>
           <li><a href="#about">About Me</a></li>
           <li><a href="#skill">Skill</a></li>
@@ -40,7 +45,7 @@
                 <p><a href="https://www.ocha.ac.jp/index.html">お茶の水女子大学</a> 人間文化創成科学研究科 理学専攻 情報科学コース 1年 <a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">戸次研究室</a>
                 </p>
                 <p>👩‍💻 First-year master's student in Computer Science, <a href="https://www.ocha.ac.jp/index.html">Ochanomizu University</a>, <a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">Bekki Lab</a>.</p>
-                <p>🥁 Drummer playing Jazz, Soul, Hiphop, Pops, Funk and Fusion!</p>
+                <p>🥁 Drummer who loves Jazz, Soul, Hiphop, Pops, Funk and Rock!</p>
               </div>
             </div>
         </section>
@@ -65,9 +70,9 @@
           <div class="info">
             <div class="date_and_title">
               <p>2025/3/13</p>
-              <p><B><U>佐伯小遥</U></B>, 富田朝, 戸次大介. 日本語推論システムlightblueの開発環境構築に向けて. 言語処理学会第31回年次大会, 2025
-              <br>❤️‍🔥 <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf">paper</a>
-              <br>❤️‍🔥 <a href="./pdfs/NLP2025.pdf">slide</a></p>
+              <p><strong><u>佐伯小遥</u></strong>, 富田朝, 戸次大介. 日本語推論システムlightblueの開発環境構築に向けて. 言語処理学会第31回年次大会, 2025
+              <br>❤️‍🔥 <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf" target="_blank" rel="noopener noreferrer">paper</a>
+              <br>❤️‍🔥 <a href="./pdfs/NLP2025.pdf" target="_blank" rel="noopener noreferrer">slide</a></p>
             </div>
           </div>
         </section>
@@ -78,35 +83,35 @@
           <section class="works-section">
 
             <div class="slideshow-container">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="prev" onclick="plusSlides(-1)" aria-label="前のスライド">&#10094;</a>
 
                  <div class="mySlides">
                   <video autoplay loop muted playsinline>
-                    <source src="images/express.mov" type="video/mp4"></video>
+                    <source src="images/express.mov"></video>
                     <div class="project-description">
                       <h2>express</h2>
                       <p>"express" is a development environment and visualization tool for the multi-lingual CCG parser with DTS representations <a href="https://github.com/kohapizza/lightblue">"lightblue"</a>.
                         This is developed using the Haskell web application framework Yesod, and provides an interactive web interface that lets users explore parsing results, expand or collapse syntactic structures, and better understand how the parser analyzes sentences.</p>
                       <div class="button-container">
-                        <a href="https://github.com/kohapizza/express" target="_blank" class="check-button">check the project</a>
-                        <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf" target="_blank" class="check-button">check the paper</a>
+                        <a href="https://github.com/kohapizza/express" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
+                        <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf" target="_blank" rel="noopener noreferrer" class="check-button">check the paper</a>
                       </div>
                     </div>
                 </div>
 
                 <div class="mySlides">
-                    <img src="images/tanoren.png" alt="タノレン / tanorenn">
+                    <img src="images/tanoren.png" alt="タノレン / tanorenn" loading="lazy">
                     <div class="project-description">
                         <h2>タノレン / tanorenn</h2>
                         <p>tanorenn is a metronome application designed to support fundamental drum practice.
                           This marks my debut application developed with Swift, which I created and successfully released on the App Store in approximately one month.
                           Drawing upon my personal drumming experience since elementary school, I implemented features focused on enabling efficient and effective basic practice.</p>
-                        <a href="https://apps.apple.com/jp/app/%E3%82%BF%E3%83%8E%E3%83%AC%E3%83%B3/id6504372310" target="_blank" class="check-button">check the project</a>
+                        <a href="https://apps.apple.com/jp/app/%E3%82%BF%E3%83%8E%E3%83%AC%E3%83%B3/id6504372310" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
                     </div>
                 </div>
 
                 <div class="mySlides">
-                    <img src="images/fatcat.png" alt="fatcat">
+                    <img src="images/fatcat.png" alt="fatcat" loading="lazy">
                     <div class="project-description">
                         <h2>Fat Cat</h2>
                         <p>
@@ -114,25 +119,25 @@
                           Users can set a specific location and time, and when they approach the designated area (within 1km), the cat appears in AR, accompanied by soft background music.
                           They can feed the cat with virtual dried fish, and the cat gradually grows over time, celebrating the user’s effort.
                         </p>
-                        <a href="https://topaz.dev/projects/a690fbbf0c9dd697e0df" target="_blank" class="check-button">check the project</a>
+                        <a href="https://topaz.dev/projects/a690fbbf0c9dd697e0df" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
                     </div>
                 </div>
 
                 <div class="mySlides">
-                    <img src="images/wallpaper.jpg" alt="Image Processing Application for Wallpaper Creation">
+                    <img src="images/wallpaper.jpg" alt="Image Processing Application for Wallpaper Creation" loading="lazy">
                     <div class="project-description">
                         <h2>Image Processing Application for Wallpaper Creation</h2>
                         <p>This application generates unique wallpaper outputs from input images each time.
                           The program implements fundamental image processing techniques such as binarization, gamma correction, scaling, and rotation, along with advanced image processing programs like K-Means clustering, chroma key synthesis, Virtual Studio, selective composition, and random composition.</p>
                           <div class="button-container">
-                            <a href="https://github.com/kohapizza/ImageProcess" target="_blank" class="check-button">check the project</a>
-                            <a href="https://github.com/kohapizza/ImageProcess/blob/main/Instructions.pdf" target="_blank" class="check-button">check the instruction</a>
+                            <a href="https://github.com/kohapizza/ImageProcess" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
+                            <a href="https://github.com/kohapizza/ImageProcess/blob/main/Instructions.pdf" target="_blank" rel="noopener noreferrer" class="check-button">check the instruction</a>
                           </div>
                     </div>
                 </div>
 
                 <div class="mySlides">
-                    <img src="images/meishikakumei.png" alt="名刺革命 / Meishi Kakumei">
+                    <img src="images/meishikakumei.png" alt="名刺革命 / Meishi Kakumei" loading="lazy">
                     <div class="project-description">
                         <h2>名刺革命 / Meishi Kakumei</h2>
                         <p>I developed 名刺革命 / Meishi Kakumei in a team of 5 in a fast-paced environment with mentorship from industry leaders which were presented to 50+ people.
@@ -140,19 +145,19 @@
                           business cards are discarded when you change departments, it is difficult to manage the business cards you receive, printing costs are high, and most students do not have business cards
                           while collaborating and peer programming with team members.
                         </p>
-                        <a href="https://www.youtube.com/watch?v=2mTMmJRrL7g" target="_blank" class="check-button">check the demo video</a>
+                        <a href="https://www.youtube.com/watch?v=2mTMmJRrL7g" target="_blank" rel="noopener noreferrer" class="check-button">check the demo video</a>
                     </div>
                 </div>
 
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="next" onclick="plusSlides(1)" aria-label="次のスライド">&#10095;</a>
             </div>
 
             <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(1)" role="button" aria-label="1枚目へ"></span>
+                <span class="dot" onclick="currentSlide(2)" role="button" aria-label="2枚目へ"></span>
+                <span class="dot" onclick="currentSlide(3)" role="button" aria-label="3枚目へ"></span>
+                <span class="dot" onclick="currentSlide(4)" role="button" aria-label="4枚目へ"></span>
+                <span class="dot" onclick="currentSlide(5)" role="button" aria-label="5枚目へ"></span>
             </div>
           </section>
         </section>
@@ -442,9 +447,9 @@
     </main>
     <footer>
         <ul>
-            <li><a href="https://www.linkedin.com/in/koharu-saeki/" target="_blank">Linkedin</a></li>
-            <li><a href="https://github.com/kohapizza" target="_blank">GitHub</a></li>
-            <li><a href="https://qiita.com/kohapizza" target="_blank">Qiita</a></li>
+            <li><a href="https://www.linkedin.com/in/koharu-saeki/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
+            <li><a href="https://github.com/kohapizza" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://qiita.com/kohapizza" target="_blank" rel="noopener noreferrer">Qiita</a></li>
         </ul>
         <p>©2024 Koharu Saeki All Rights Reserved.</p>
     </footer>

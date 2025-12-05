@@ -120,20 +120,6 @@ section hr {
   margin-bottom: 40px;
 }
 
-#aboutme {
-  width: 50%;
-}
-
-#aligned {
-  display: flex;
-  align-items: center; /* 垂直方向に中央揃え */
-  justify-content: center; /* 水平方向に中央揃え */
-  text-align: center;
-}
-
-#aligned p {
-  background-color: aqua;
-}
 
 #about img {
   display: block;
@@ -265,6 +251,9 @@ section a {
   z-index: 10;
   font-size: 40px;
   color: #fff;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .works-section {
@@ -284,7 +273,7 @@ section a {
     display: none;
 }
 
-.mySlides img, video {
+.mySlides img, .mySlides video {
     height: 100%;
     max-height: 300px;
     width: auto;
@@ -352,7 +341,7 @@ section a {
     display: inline-block;
 }
 
-.active, .dot:hover {
+.dot.active, .dot:hover {
     background-color: #717171;
 }
 
@@ -363,7 +352,7 @@ section a {
     display: flex;
   }
 
-  .menu_active {
+  header nav.menu_active {
     right: 0;
   }
 

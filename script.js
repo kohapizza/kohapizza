@@ -4,8 +4,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
       if (target) {
+          const header = document.querySelector('header');
+          const headerHeight = header ? header.offsetHeight : 0;
+          const targetTop = target.getBoundingClientRect().top + window.scrollY;
           window.scrollTo({
-              top: target.offsetTop - 50, // ヘッダーの高さを考慮
+              top: targetTop - headerHeight,
               behavior: 'smooth',
           });
       }
@@ -65,26 +68,18 @@ responsive_menu_btn.addEventListener('click', menuToggle);
 
 function menuToggle() {
     const nav = document.querySelector('header nav');
-    nav.classList.toggle('menu_active');
-    
-    // ボタンのマークを切り替え
-    if (nav.classList.contains('menu_active')) {
-        responsive_menu_btn.textContent = '×';
-    } else {
-        responsive_menu_btn.textContent = '☰';
-    }
+    const active = nav.classList.toggle('menu_active');
+    // ARIAとボタン表示の同期
+    responsive_menu_btn.setAttribute('aria-expanded', active ? 'true' : 'false');
+    responsive_menu_btn.textContent = active ? '×' : '☰';
 }
 
 document.querySelectorAll('header nav ul li a').forEach(link => {
     link.addEventListener('click', () => {
         const nav = document.querySelector('header nav');
         nav.classList.remove('menu_active');
-
-        // ボタンのマークを切り替え
-        if (nav.classList.contains('menu_active')) {
-            responsive_menu_btn.textContent = '×';
-        } else {
-            responsive_menu_btn.textContent = '☰';
-        }
+        // ARIAとボタン表示の同期
+        responsive_menu_btn.setAttribute('aria-expanded', 'false');
+        responsive_menu_btn.textContent = '☰';
     });
 });
