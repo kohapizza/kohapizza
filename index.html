@@ -126,8 +126,6 @@
           <section class="project-section">
 
             <div class="slideshow-container">
-                <a class="prev" onclick="plusSlides(-1)" aria-label="前のスライド">&#10094;</a>
-
                  <div class="mySlides">
                   <video autoplay loop muted playsinline>
                     <source src="images/express.mov"></video>
@@ -192,15 +190,18 @@
                     </div>
                 </div>
 
-                <a class="next" onclick="plusSlides(1)" aria-label="次のスライド">&#10095;</a>
             </div>
 
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)" role="button" aria-label="1枚目へ"></span>
-                <span class="dot" onclick="currentSlide(2)" role="button" aria-label="2枚目へ"></span>
-                <span class="dot" onclick="currentSlide(3)" role="button" aria-label="3枚目へ"></span>
-                <span class="dot" onclick="currentSlide(4)" role="button" aria-label="4枚目へ"></span>
-                <span class="dot" onclick="currentSlide(5)" role="button" aria-label="5枚目へ"></span>
+            <div class="slide-nav">
+                <a class="prev" onclick="plusSlides(-1)" aria-label="前のスライド">← prev</a>
+                <div class="dots-wrap">
+                    <span class="dot" onclick="currentSlide(1)" role="button" aria-label="1枚目へ"></span>
+                    <span class="dot" onclick="currentSlide(2)" role="button" aria-label="2枚目へ"></span>
+                    <span class="dot" onclick="currentSlide(3)" role="button" aria-label="3枚目へ"></span>
+                    <span class="dot" onclick="currentSlide(4)" role="button" aria-label="4枚目へ"></span>
+                    <span class="dot" onclick="currentSlide(5)" role="button" aria-label="5枚目へ"></span>
+                </div>
+                <a class="next" onclick="plusSlides(1)" aria-label="次のスライド">next →</a>
             </div>
           </section>
         </section>
