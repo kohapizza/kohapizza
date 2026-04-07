@@ -11,11 +11,7 @@
 
 <img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=haskell,swift,python,c,java,javascript,php,ocaml" />
 
-<h3 align="left">Markup Languages:</h3>
-
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=html,css" />
-
 <h3 align="left">Technologies I've used:</h3>
 
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,wordpress,docker,pr,figma,postgres,django,emacs,jquery,mysql,vscode,blender" />
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=github,docker,figma,mysql" />
 </p>
