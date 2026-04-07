@@ -9,7 +9,7 @@
 
 <h3 align="left">Programming Languages:</h3>
 
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=haskell,swift,python,c,java,javascript,php,ocaml" />
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=haskell,swift,python,ocaml" />
 
 <h3 align="left">Technologies I've used:</h3>
 
