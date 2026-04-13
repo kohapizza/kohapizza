@@ -729,7 +729,5 @@ footer p {
   .introBox { text-align: left; }
   .skillList { grid-template-columns: 1fr; }
 
-  .hero-photo { display: none; }
-
   .slide-nav { flex-wrap: wrap; gap: 12px; justify-content: center; }
 }
