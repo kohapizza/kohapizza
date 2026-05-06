@@ -1,5 +1,5 @@
 <h1 align="center">❤️‍🔥 Hi, I'm Koharu! ❤️‍🔥</h1>
-<h3 align="center">🥁 Japanese Drummer/Computer Science Student 👩‍💻</h3>
+<h3 align="center">🥁 Japanese Drummer/Computer Science Student/Software Engineer 👩‍💻</h3>
 <h3 align="center">☺︎ Interested in Computational Linguistics, Functional Programming Languages, Music×IT, and iOS Applications ☺︎</h3>
 
 <p align="center">
