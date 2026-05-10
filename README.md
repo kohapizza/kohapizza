@@ -9,5 +9,5 @@
 
 <h3 align="left">Programming Languages:</h3>
 
-<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=haskell,swift,python,ocaml" />
+<img alt="my skills" src="https://skillicons.dev/icons?theme=dark&perline=8&i=haskell,swift,python" />
 </p>
