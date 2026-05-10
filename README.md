@@ -3,7 +3,7 @@
 <h3 align="center">☺︎ Interested in Computational Linguistics, Functional Programming Languages, Music×IT, and iOS Applications ☺︎</h3>
 
 <p align="center">
-<img alt="Top Langs" height="180px" src="https://github-readme-stats-pfagr4dq5-koharus-projects-ea601c39.vercel.app/api/top-langs/?username=kohapizza&layout=donut&theme=radical&bg_color=0D1117&hide_border=true" />
+<img alt="Top Langs" height="180px" src="https://github-readme-stats-gold-eta-94.vercel.app/api/top-langs/?username=kohapizza&layout=donut&theme=radical&bg_color=0D1117&hide_border=true" />
 
 </p>
 
