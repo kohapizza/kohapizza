@@ -18,7 +18,7 @@
   --sans: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Zen Kaku Gothic New',
           -apple-system, BlinkMacSystemFont, 'Yu Gothic', 'Meiryo', sans-serif;
 
-  --sidebar-w: clamp(320px, 37vw, 540px);
+  --sidebar-w: clamp(300px, 34vw, 500px);
   --content-max: 880px;
 }
 
