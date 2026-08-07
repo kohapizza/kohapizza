@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,435 +12,308 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=28">
 </head>
 <body>
-    <header>
-      <button class="responsive_btn" aria-controls="site-nav" aria-expanded="false" aria-label="メニューを開閉">
-        ☰
-      </button>
-      <nav id="site-nav" class="header_nav">
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#skill">Skill</a></li>
-          <li><a href="#research">Research</a></li>
-          <!-- <li><a href="#project">Project</a></li> -->
-          <li><a href="#education">Education</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#activity">Other Activities</a></li>
+    <a href="#home" class="skip-link">Skip to content</a>
+
+    <!-- Mobile top bar -->
+    <div class="mobilebar">
+      <a href="#home" class="mobilebar-name" data-nav>Koharu&nbsp;Saeki</a>
+      <button class="responsive_btn" aria-controls="site-nav" aria-expanded="false" aria-label="メニューを開閉">☰</button>
+    </div>
+
+    <!-- Fixed left sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
+        <a href="#home" class="brand" data-nav>
+          <span class="brand-name">Koharu Saeki</span>
+        </a>
+
+        <nav id="site-nav" class="site-nav" aria-label="セクション">
+          <ul>
+            <li><a href="#home" data-nav>Home</a></li>
+            <li><a href="#skill" data-nav>Skill</a></li>
+            <li><a href="#research" data-nav>Research</a></li>
+            <li><a href="#education" data-nav>Education</a></li>
+            <li><a href="#experience" data-nav>Experience</a></li>
+            <li><a href="#activity" data-nav>Activities</a></li>
+            <li><a href="#drums" data-nav>Drums</a></li>
+          </ul>
+        </nav>
+
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/koharu-saeki/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a></li>
+          <li><a href="https://github.com/kohapizza" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a></li>
         </ul>
-      </nav>
-    </header>
-    <main>
-        <section id="sky">
-            <!-- ハートイメージ -->
-            <img class="ascii-art" src="images/hero-heart.webp" alt="" aria-hidden="true">
 
-            <!-- テキスト -->
-            <div class="hero-content">
-    
-                <div class="hero-name">Koharu Saeki</div>
-    
-                <div class="hero-tagline">
-                    <span class="hero-tag aqua">Computational Linguistics Researcher</span>
-                    <span class="hero-tag pink">Drummer</span>
-                    <span class="hero-tag aqua">Software Engineer</span>
-                    <span class="hero-tag aqua">CS M.Sc. Student</span>
-                </div>
-            </div>
+        <span class="contact-email">saeki.koharu[at]is.ocha.ac.jp</span>
 
-        </section>
+      </div>
+    </aside>
 
-        <section id="about">
-            <h1>About Me</h1>
-            <hr>
-            <div class="box">
-              <div class="introImg">
-                <img src="images/profile.jpg" alt="Koharu's Photo">
-              </div>
-              <div class="introBox">
-                <h3>佐伯 小遥 / Saeki Koharu</h3>
-                <p><a href="https://www.ocha.ac.jp/index.html">お茶の水女子大学</a> 人間文化創成科学研究科 理学専攻 情報科学コース 2年 <a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">戸次研究室</a>
-                </p>
-                <p>👩‍💻 Second-year master's student in Computer Science, <a href="https://www.ocha.ac.jp/index.html">Ochanomizu University</a>, <a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">Bekki Lab</a>.</p>
-                <p>🥁 Drummer who loves Jazz, Soul, Hiphop, Pops, Funk and Rock!</p>
-              </div>
+    <main id="main">
+      <!-- HOME -->
+      <section id="home" class="page hero">
+        <div class="hero-photo">
+          <img src="images/profile.jpg" alt="Koharu Saeki" width="440" height="440">
+        </div>
+        <p class="hero-lead">
+          <span class="only-en">A second-year master's student in Computer Science at <a href="https://www.ocha.ac.jp/index.html">Ochanomizu University</a> (<a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">Bekki Lab</a>), researching computational linguistics — a software engineer, and a drummer who loves Jazz, Soul, Hiphop, Pops, Funk and Rock 👩‍💻🥁</span>
+          <span class="only-ja"><a href="https://www.ocha.ac.jp/index.html">お茶の水女子大学</a>大学院（<a href="https://bekkilab.notion.site/Bekkilab-Official-Website-6892e2a7d9fd4cf388f415986eefc2e2">戸次研究室</a>）で計算言語学を研究する情報科学専攻の修士2年。ソフトウェアエンジニアであり、ジャズ・ソウル・ヒップホップ・ポップス・ファンク・ロックを愛するドラマー 👩‍💻🥁</span>
+        </p>
+      </section>
+
+      <!-- SKILL -->
+      <section id="skill" class="page">
+        <header class="section-head">
+          <h2>Skill</h2>
+        </header>
+        <div class="section-body">
+          <dl class="skill-grid">
+            <div class="skill-row">
+              <dt>Languages</dt>
+              <dd>Haskell / Swift / Python</dd>
             </div>
-        </section>
-        <section id="skill">
-            <h1>Skill</h1>
-            <hr>
-            <div class="skillList">
-              <div class="skillInfo">
-                  <p>Languages</p>
-                  <p>- Haskell <br>- Swift <br>- Python</p>
-              </div>
-              <div class="skillInfo">
-                  <p>Other Skills</p>
-                  <p>- AWS <br>- GCP <br>- Git <br>- Drums</p>
-              </div>
+            <div class="skill-row">
+              <dt>Other Skills</dt>
+              <dd>AWS / GCP / Git / Drums</dd>
             </div>
-        </section>
-        <section id="research">
-          <h1>Research</h1>
-          <hr>
-          <p>#計算言語学　#自然言語処理　#理論言語学　#形式文法　#文法開発　#Haskell　#Yesod</p>
-          <div class="info">
-            <div class="date_and_title">
-              <p>2025/3/13</p>
-              <p><strong><u>佐伯小遥</u></strong>, 富田朝, 戸次大介. 日本語推論システムlightblueの開発環境構築に向けて (Toward Building a Development Environment for the Japanese NLI System lightblue). 言語処理学会第31回年次大会, 2025
-              <br>❤️‍🔥 <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf" target="_blank" rel="noopener noreferrer">paper</a></p>
-            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- RESEARCH -->
+      <section id="research" class="page">
+        <header class="section-head">
+          <h2>Research</h2>
+        </header>
+        <div class="section-body">
+          <ul class="tagline">
+            <li><span class="only-en">#ComputationalLinguistics</span><span class="only-ja">#計算言語学</span></li><li><span class="only-en">#NLP</span><span class="only-ja">#自然言語処理</span></li><li><span class="only-en">#TheoreticalLinguistics</span><span class="only-ja">#理論言語学</span></li><li><span class="only-en">#FormalGrammar</span><span class="only-ja">#形式文法</span></li><li><span class="only-en">#GrammarDevelopment</span><span class="only-ja">#文法開発</span></li><li>#Haskell</li><li>#Yesod</li>
+          </ul>
+
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-meta">2026 / 08</div>
+              <div class="entry-main">
+                <p class="entry-title"><strong>Koharu Saeki</strong>, Daisuke Bekki. Where Does Proof Search Spend Its Effort? A Visualization and Profiling Tool for Formal NLI. <span class="entry-sub">In Proceedings of the 6th Workshop on Natural Language Meets Logic and Machine Learning (NALOMA), Prague, Czechia, 2026</span></p>
+                <p class="entry-links"><a href="https://aclanthology.org/2026.naloma-1.7/" target="_blank" rel="noopener noreferrer">paper ↗</a> <a href="pdfs/naloma2026_slides.pdf" target="_blank" rel="noopener noreferrer">slide ↗</a></p>
+                <p class="entry-tags"><span class="tag">Peer-Reviewed</span><span class="tag">International</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2026 / 07</div>
+              <div class="entry-main">
+                <p class="entry-title"><strong>Koharu Saeki</strong>, Daisuke Bekki. From Execution to Exploration: Bridging the Usability Gap in Formal Natural Language Inference. <span class="entry-sub">In Proceedings of the 3rd Workshop on Bridges and Gaps between Formal and Computational Linguistics (BriGap-3), Paris, France, 2026</span></p>
+                <p class="entry-links"><a href="https://aclanthology.org/2026.brigap-1.1/" target="_blank" rel="noopener noreferrer">paper ↗</a></p>
+                <p class="entry-tags"><span class="tag">Peer-Reviewed</span><span class="tag">International</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2026 / 03</div>
+              <div class="entry-main">
+                <p class="entry-title"><strong>佐伯小遥</strong>, 富田朝, 松原舞, 戸次大介. Yesod による日本語推論システム lightblue の開発環境の構築 <span class="entry-sub">(Building a Development Environment for the Japanese NLI System lightblue with Yesod). 言語処理学会第32回年次大会, 2026</span></p>
+                <p class="entry-links"><a href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/Q6-13.pdf" target="_blank" rel="noopener noreferrer">paper ↗</a> <a href="images/nlp2026_poster.pdf" target="_blank" rel="noopener noreferrer">poster ↗</a></p>
+                <p class="entry-tags"><span class="tag">Domestic</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2025 / 03</div>
+              <div class="entry-main">
+                <p class="entry-title"><strong>佐伯小遥</strong>, 富田朝, 戸次大介. 日本語推論システム lightblue の開発環境構築に向けて <span class="entry-sub">(Toward Building a Development Environment for the Japanese NLI System lightblue). 言語処理学会第31回年次大会, 2025</span></p>
+                <p class="entry-links"><a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf" target="_blank" rel="noopener noreferrer">paper ↗</a></p>
+                <p class="entry-tags"><span class="tag">Domestic</span></p>
+              </div>
+            </article>
           </div>
-          <div class="info">
-            <div class="date_and_title">
-              <p>2026/3</p>
-              <p><strong><u>佐伯小遥</u></strong>, 富田朝, 松原舞, 戸次大介. Yesod による日本語推論システム lightblue の開発環境の構築 (Building a Development Environment for the Japanese NLI System lightblue with Yesod). 言語処理学会第32回年次大会, 2026
-              <br>❤️‍🔥 <a href="https://www.anlp.jp/proceedings/annual_meeting/2026/pdf_dir/Q6-13.pdf" target="_blank" rel="noopener noreferrer">paper</a> &nbsp;／&nbsp; <a href="images/nlp2026_poster.pdf" target="_blank" rel="noopener noreferrer">poster</a></p>
-            </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="page">
+        <header class="section-head">
+          <h2>Education</h2>
+        </header>
+        <div class="section-body">
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-meta">2025/04 – 2027/03<span class="entry-note">expected</span></div>
+              <div class="entry-main">
+                <p class="entry-title"><a href="https://www.ocha.ac.jp/index.html"><span class="only-ja">お茶の水女子大学 大学院 人間文化創成科学研究科 理学専攻 情報科学コース</span><span class="only-en">Ochanomizu University, Graduate School</span></a> <span class="entry-sub"><span class="only-en">M.Sc. in Information Sciences / Tokyo, JAPAN</span></span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2024/08 – 2024/09</div>
+              <div class="entry-main">
+                <p class="entry-title">EF Language School in Honolulu, Hawaii</p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2021/04 – 2025/03</div>
+              <div class="entry-main">
+                <p class="entry-title"><a href="https://www.ocha.ac.jp/index.html"><span class="only-ja">お茶の水女子大学 理学部 情報科学科</span><span class="only-en">Ochanomizu University</span></a> <span class="entry-sub"><span class="only-en">B.Sc. in Information Science, Faculty of Science · Tokyo, JAPAN</span></span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2018/04 – 2021/03</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-ja">朋優学院高等学校</span><span class="only-en">Hoyu Gakuin High School</span> <span class="entry-sub"><span class="only-en">Tokyo, JAPAN</span></span></p>
+                <p class="entry-desc"><span class="only-en">Graduated as a scholarship student.</span><span class="only-ja">特待生として卒業。</span></p>
+              </div>
+            </article>
           </div>
-          <div class="info">
-            <div class="date_and_title">
-              <p>accepted</p>
-              <p><strong><u>Koharu Saeki</u></strong>, Daisuke Bekki. From Execution to Exploration: Bridging the Usability Gap in Formal Natural Language Inference. <em>Accepted at BRIGAP 2026</em></p>
-            </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="page">
+        <header class="section-head">
+          <h2>Experience</h2>
+        </header>
+        <div class="section-body">
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-meta">2025/11 – 2026/06</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Software Engineer</span><span class="only-ja">ソフトウェアエンジニア</span> <span class="entry-at">@ CyberACE</span></p>
+                <p class="entry-desc"><span class="only-en">I worked at CyberACE as a software engineering intern.</span><span class="only-ja">ソフトウェアエンジニアのインターンとして CyberACE で働きました。</span></p>
+                <p class="entry-links"><a href="https://zenn.dev/cyberace/articles/85f9c4da716edf" target="_blank" rel="noopener noreferrer">article 1 ↗</a> <a href="https://zenn.dev/cyberace/articles/10e8637888d890" target="_blank" rel="noopener noreferrer">article 2 ↗</a></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2025/10 – 2026/02</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Teaching Assistant</span><span class="only-ja">ティーチングアシスタント</span> <span class="entry-at">@ Ochanomizu University</span></p>
+                <p class="entry-desc"><span class="only-en">I assisted with the General Topology and Grammar and Semantics courses.</span><span class="only-ja">位相空間論と文法と意味の授業を担当しました。</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2025/09 – 2025/10</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Backend Engineer</span><span class="only-ja">バックエンドエンジニア</span> <span class="entry-at">@ Rakuten</span></p>
+                <p class="entry-desc"><span class="only-en">I joined Rakuten's <a href="https://corp.rakuten.co.jp/careers/feature/adtech/business/" target="_blank" rel="noopener noreferrer">GATD</a> division as a backend engineering intern.</span><span class="only-ja">楽天の<a href="https://corp.rakuten.co.jp/careers/feature/adtech/business/" target="_blank" rel="noopener noreferrer">GATD</a>部門にバックエンドエンジニアのインターンとして参加しました。</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2025/08 – 2025/09</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Cloud Support Engineer</span><span class="only-ja">クラウドサポートエンジニア</span> <span class="entry-at">@ Amazon Web Services</span></p>
+                <p class="entry-desc"><span class="only-en">I joined AWS as a software engineering intern.</span><span class="only-ja">ソフトウェアエンジニアのインターンとして AWS に参加しました。</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2024/07 – 2025/06</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">iOS Engineer</span><span class="only-ja">iOSエンジニア</span> <span class="entry-at">@ <a href="https://hack.nikkei.com/"><span class="only-en">Nikkei</span><span class="only-ja">日本経済新聞社</span></a></span></p>
+                <p class="entry-desc"><span class="only-en">I joined an iOS team and developed the Nikkei digital edition. I also organized an event for female students studying Computer Science.</span><span class="only-ja">iOS チームに参加し、日経電子版を開発しました。情報科学を学ぶ女子学生向けのイベントも企画しました。</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2024/06 – Present</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">iOS Development Mentor</span><span class="only-ja">iOS開発メンター</span> <span class="entry-at">@ <a href="https://life-is-tech.com/">Life is Tech!</a></span></p>
+                <p class="entry-desc"><span class="only-en">I mentor iOS app development to middle and high school students through weekly schools and camps held during long vacations.</span><span class="only-ja">週次のスクールや長期休暇中のキャンプで、中高生に iOS アプリ開発をメンタリングしています。</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2023/10 – 2024/08</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Head of Accounting / Websites Coding</span><span class="only-ja">会計・Webサイトコーディング責任者</span> <span class="entry-at">@ <a href="https://overfocus.co.jp/">Overfocus</a></span></p>
+                <p class="entry-desc"><span class="only-en">As one of the early members of Overfocus, I built a financial system and was in charge of HP&nbsp;&amp;&nbsp;LP coding.</span><span class="only-ja">Overfocus の初期メンバーの一人として会計システムを構築し、HP・LP のコーディングを担当しました。</span></p>
+              </div>
+            </article>
           </div>
-          <div class="info">
-            <div class="date_and_title">
-              <p>accepted</p>
-              <p><strong><u>Koharu Saeki</u></strong>, Daisuke Bekki. Where Does Proof Search Spend Its Effort? A Visualization and Profiling Tool for Formal NLI. <em>Accepted at NALOMA 2026</em></p>
-            </div>
+        </div>
+      </section>
+
+      <!-- OTHER ACTIVITIES -->
+      <section id="activity" class="page">
+        <header class="section-head">
+          <h2>Other Activities</h2>
+        </header>
+        <div class="section-body">
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-meta">2025/06</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">1st place 🥇</span><span class="only-ja">優勝 🥇</span> <span class="entry-at">@ <a href="https://progate.connpass.com/event/351298/"><span class="only-en">Progate Women's Hackathon powered by SmartHR</span><span class="only-ja">Progate Women's ハッカソン powered by SmartHR</span></a></span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2025/06</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Mentor</span><span class="only-ja">メンター</span> <span class="entry-at">@ <a href="https://www.camp.waffle-waffle.org/">Waffle Camp</a> at Niigata</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2024/05 – Present</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Volunteer Web Developer</span><span class="only-ja">ボランティア Web エンジニア</span> <span class="entry-at">@ <a href="https://discovernikkei.org/ja/">Discover Nikkei</a></span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2024/04</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Teaching Assistant</span><span class="only-ja">ティーチングアシスタント</span> <span class="entry-at">@ <a href="https://www.college.waffle-waffle.org/">Waffle College Entry Course</a></span></p>
+                <p class="entry-desc"><span class="only-en">I helped female college students who had never programmed before develop apps using Thunkable.</span><span class="only-ja">プログラミング未経験の女子大学生が Thunkable でアプリを開発するのをサポートしました。</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2024/03</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Mentor</span><span class="only-ja">メンター</span> <span class="entry-at">@ <a href="https://www.camp.waffle-waffle.org/">Waffle Camp</a> at Kobe</span></p>
+                <p class="entry-desc"><span class="only-en">I helped middle and high school students create websites.</span><span class="only-ja">中高生の Web サイト制作をサポートしました。</span></p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-meta">2023/08 – 2024/03</div>
+              <div class="entry-main">
+                <p class="entry-title"><a href="https://www.college.waffle-waffle.org/">Waffle College Tech Career Course</a></p>
+                <p class="entry-desc"><span class="only-en">Selected as 1 of 41 students to learn web programming and the software development cycle from scratch in 8 months. I developed Meishi Kakumei in a team of 5 with mentorship from industry leaders, presented to 50+ people, using JavaScript, PHP, CSS, MySQL, HTML and Figma.</span><span class="only-ja">41名の受講生の1人に選抜され、8か月間で Web プログラミングとソフトウェア開発の一連の流れをゼロから学びました。業界のメンターの指導のもと、5人チームで「名刺革命」を開発し、50名以上の前で発表。JavaScript・PHP・CSS・MySQL・HTML・Figma を用いて開発しました。</span></p>
+              </div>
+            </article>
           </div>
-        </section>
-        <!--
-        <section id="project">
-          <h1>Project</h1>
-          <hr>
+        </div>
 
-          <section class="project-section">
+      </section>
 
-            <div class="slideshow-container">
-                 <div class="mySlides">
-                  <video autoplay loop muted playsinline>
-                    <source src="images/express.mov"></video>
-                    <div class="project-description">
-                      <h2>express</h2>
-                      <p>"express" is a development environment and visualization tool for the multi-lingual CCG parser with DTS representations <a href="https://github.com/kohapizza/lightblue">"lightblue"</a>.
-                        This is developed using the Haskell web application framework Yesod, and provides an interactive web interface that lets users explore parsing results, expand or collapse syntactic structures, and better understand how the parser analyzes sentences.</p>
-                      <div class="button-container">
-                        <a href="https://github.com/kohapizza/express" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
-                        <a href="https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/B2-3.pdf" target="_blank" rel="noopener noreferrer" class="check-button">check the paper</a>
-                      </div>
-                    </div>
-                </div>
+      <!-- DRUMS -->
+      <section id="drums" class="page">
+        <header class="section-head">
+          <h2>Drums</h2>
+        </header>
+        <div class="section-body">
+          <p class="only-en">Hi, I am a drummer who loves Jazz, Soul, Hiphop, Pops, Funk and Rock!</p>
+          <p class="only-ja">こんにちは！ジャズ・ソウル・ヒップホップ・ポップス・ファンク・ロックを愛するドラマーです！</p>
+          <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/MNrw-gnpC6k" title="Koharu Saeki — drum performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="video">
+            <iframe src="https://www.youtube-nocookie.com/embed/ocuCDfvcHLY" title="Koharu Saeki — drum performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-meta">2024/09</div>
+              <div class="entry-main">
+                <p class="entry-title"><span class="only-en">Interviewed by music writer Dr. Funkshitteru about my band</span><span class="only-ja">音楽ライター Dr.Funkっしてる氏に、自身のバンドについてインタビューされました</span></p>
+                <p class="entry-links">🥁 <a href="https://note.com/drfunk/n/na2c3186dd314">Interview 1 ↗</a> <a href="https://note.com/drfunk/n/n01c8bbb3d3c0?magazine_key=m7b7c9e4d763f">Interview 2 ↗</a></p>
+              </div>
+            </article>
+          </div>
+        </div>
 
-                <div class="mySlides">
-                    <img src="images/tanoren.png" alt="タノレン / tanorenn" loading="lazy">
-                    <div class="project-description">
-                        <h2>タノレン / tanorenn</h2>
-                        <p>tanorenn is a metronome application designed to support fundamental drum practice.
-                          This marks my debut application developed with Swift, which I created and successfully released on the App Store in approximately one month.
-                          Drawing upon my personal drumming experience since elementary school, I implemented features focused on enabling efficient and effective basic practice.</p>
-                        <a href="https://apps.apple.com/jp/app/%E3%82%BF%E3%83%8E%E3%83%AC%E3%83%B3/id6504372310" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
-                    </div>
-                </div>
-
-                <div class="mySlides">
-                    <img src="images/fatcat.png" alt="fatcat" loading="lazy">
-                    <div class="project-description">
-                        <h2>Fat Cat</h2>
-                        <p>
-                          fat cat is an AR iOS app designed to gently encourage users to go to places they find stressful—like school or work—by placing an adorable virtual cat waiting just for them.
-                          Users can set a specific location and time, and when they approach the designated area (within 1km), the cat appears in AR, accompanied by soft background music.
-                          They can feed the cat with virtual dried fish, and the cat gradually grows over time, celebrating the user’s effort.
-                        </p>
-                        <a href="https://topaz.dev/projects/a690fbbf0c9dd697e0df" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
-                    </div>
-                </div>
-
-                <div class="mySlides">
-                    <img src="images/wallpaper.jpg" alt="Image Processing Application for Wallpaper Creation" loading="lazy">
-                    <div class="project-description">
-                        <h2>Image Processing Application for Wallpaper Creation</h2>
-                        <p>This application generates unique wallpaper outputs from input images each time.
-                          The program implements fundamental image processing techniques such as binarization, gamma correction, scaling, and rotation, along with advanced image processing programs like K-Means clustering, chroma key synthesis, Virtual Studio, selective composition, and random composition.</p>
-                          <div class="button-container">
-                            <a href="https://github.com/kohapizza/ImageProcess" target="_blank" rel="noopener noreferrer" class="check-button">check the project</a>
-                            <a href="https://github.com/kohapizza/ImageProcess/blob/main/Instructions.pdf" target="_blank" rel="noopener noreferrer" class="check-button">check the instruction</a>
-                          </div>
-                    </div>
-                </div>
-
-                <div class="mySlides">
-                    <img src="images/meishikakumei.png" alt="名刺革命 / Meishi Kakumei" loading="lazy">
-                    <div class="project-description">
-                        <h2>名刺革命 / Meishi Kakumei</h2>
-                        <p>I developed 名刺革命 / Meishi Kakumei in a team of 5 in a fast-paced environment with mentorship from industry leaders which were presented to 50+ people.
-                          We utilized JavaScript, PHP, CSS, MySQL, HTML, and Figma to develop 名刺革命 / Meishi Kakumei to help you solve the following four problems:
-                          business cards are discarded when you change departments, it is difficult to manage the business cards you receive, printing costs are high, and most students do not have business cards
-                          while collaborating and peer programming with team members.
-                        </p>
-                        <a href="https://www.youtube.com/watch?v=2mTMmJRrL7g" target="_blank" rel="noopener noreferrer" class="check-button">check the demo video</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="slide-nav">
-                <a class="prev" onclick="plusSlides(-1)" aria-label="前のスライド">← prev</a>
-                <div class="dots-wrap">
-                    <span class="dot" onclick="currentSlide(1)" role="button" aria-label="1枚目へ"></span>
-                    <span class="dot" onclick="currentSlide(2)" role="button" aria-label="2枚目へ"></span>
-                    <span class="dot" onclick="currentSlide(3)" role="button" aria-label="3枚目へ"></span>
-                    <span class="dot" onclick="currentSlide(4)" role="button" aria-label="4枚目へ"></span>
-                    <span class="dot" onclick="currentSlide(5)" role="button" aria-label="5枚目へ"></span>
-                </div>
-                <a class="next" onclick="plusSlides(1)" aria-label="次のスライド">next →</a>
-            </div>
-          </section>
-        </section>
-        -->
-
-        <section id="education">
-            <h1>Education</h1>
-            <hr>
-            <div class="educationList">
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2018/04 - 2021/03</p>
-                  <p>朋優学院高校 <br>Hoyu Gakuin High School, Tokyo, JAPAN
-                    <br>I graduated as a scholarship student.</p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2021/04 - 2025/03</p>
-                  <p><a href="https://www.ocha.ac.jp/index.html">お茶の水女子大学</a> 理学部 情報科学科 <br>Bachelor's degree of Science from <a href="https://www.ocha.ac.jp/index.html">Ochanomizu University</a>, Tokyo, JAPAN</p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2024/08 - 2024/09</p>
-                  <p>EF Language School in Honolulu, Hawaii</p>
-                </div>
-            </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2025/04 - (expected) 2027/03</p>
-                  <p><a href="https://www.ocha.ac.jp/index.html">お茶の水女子大学大学院</a> 人間文化創成科学研究科 理学専攻 情報科学コース<br>Master's degree of Science from <a href="https://www.ocha.ac.jp/index.html">Ochanomizu University</a>, Tokyo, JAPAN</p>  
-                </div>
-              </div>
-            </div>
-        </section>
-        <section id="experience">
-            <h1>Experience</h1>
-            <hr>
-            <div class="experienceList">
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2023/10 - 2024/08</p>
-                  <p>Head of Accounting/Websites Coding @ <a href="https://overfocus.co.jp/">Overfocus</a></p>
-                </div>
-                <div class="detailed">
-                  <p class="dummy"></p>
-                  <p class="detailed_description">
-                    - Accounting
-                  <br>　I created a financial system as one of the early members of Overfocus.
-                  <br>- Websites Coding
-                  <br>　I was in charge of <a href="https://yomisama.overfocus.co.jp/">HP&LP</a> coding.
-                  </p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2023/08 - 2024/03</p>
-                  <p><a href="https://www.college.waffle-waffle.org/">Waffle College Tech Career Course</a></p>
-                </div>
-                <div class="detailed">
-                  <p class="dummy"></p>
-                  <p class="detailed_description">
-                    I was selected as 1 of 41 students to pursue the Waffle College Tech Career Course where I learned web programming and the software development cycle from scratch in 8 months.
-                  I developed Meishi Kakumei / 名刺革命 in a team of 5 in a fast-paced environment with mentorship from industry leaders which were presented to 50+ people.
-                  We utilized JavaScript, PHP, CSS, MySQL, HTML, and Figma to develop Meishi Kakumei / 名刺革命 to help you solve the following four problems:
-                  <br>・business cards are discarded when you change departments,
-                  <br>・it is difficult to manage the business cards you receive,
-                  <br>・printing costs are high,
-                  <br>・and most students do not have business cards
-                  <br>while collaborating and peer programming with team members.
-                  </p>
-                </div>  
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2024/06 - Present</p>
-                  <p>iOS developement mentor @ <a href="https://life-is-tech.com/">Life is Tech!</a></p>
-                </div>
-                <div class="detailed">
-                  <p class="dummy"></p>
-                  <p class="detailed_description">
-                    I mentor iOS app development to middle and high school students through weekly schools and camps held during long vacations.
-                  </p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2024/07 - 2025/6</p>
-                  <p>iOS developer @ <a href="https://hack.nikkei.com/">Nikkei / 日本経済新聞社</a></p>
-                </div>
-                <div class="detailed">
-                  <p class="dummy"></p>
-                  <p class="detailed_description">I joined an iOS team and developed 日経電子版. I also organized an event for female students studying Computer Science.</p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2025/08 - 2025/09</p>
-                  <p>Cloud Support Engineer @ Amazon Web Service</p>
-                </div>
-                <div class="detailed">
-                  <p class="dummy"></p>
-                  <p class="detailed_description">I joined AWS as a software engineering intern.</p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2025/09 - 2025/10</p>
-                  <p>Software Engineer @ Rakuten</p>
-                </div>
-                <div class="detailed">
-                  <p class="dummy"></p>
-                  <p class="detailed_description">I joined Rakuten as a software engineering intern.</p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2025/10 - 2026/02</p>
-                  <p>Teaching Assistant @ Ochanomizu University</p>
-                </div>
-              </div>
-              <div class="info">
-                <div class="date_and_title">
-                  <p>2025/11 - Present</p>
-                  <p>Software Engineer @ CyberACE</p>
-                </div>
-                <div class="detailed">
-                  <p class="dummy"></p>
-                  <p class="detailed_description">I'm currently working at CyberACE as a software engineering intern.
-                  <br>❤️‍🔥 <a href="https://zenn.dev/cyberace/articles/85f9c4da716edf" target="_blank" rel="noopener noreferrer">article</a></p>
-                </div>
-              </div>
-            </div>            
-        </section>
-        <section id="activity">
-          <h1>Other Activities</h1>
-          <hr>
-
-
-          <div class="activityList">
-            <div class="info">
-              <div class="date_and_title">
-                <p>2021/11 - 2022/11</p>
-                <p>Representative @ <a href="https://toudaionkan.com/">Todai Onkan / 東大音感</a></p>
-              </div>
-              <div class="detailed">
-                <p class="dummy"></p>
-                <p class="detailed_description">
-                  I was a representative of the web section, and I created and edited <a href="https://www.youtube.com/user/toudaionkan">over 500 videos</a> in one year.
-              As an executive, I was the center of more than 200 members of the club and managed the live performances.
-              Through weekly executive meetings, we talked and thought a lot about how to improve the community.
-                </p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2022/07, 2023/07, 2024/07</p>
-                <p>Volunteer @ <a href="https://shimokita-fes.com/33th/">Shimokitazawa Festival / 下北沢音楽祭</a></p>   
-              </div>
-              
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2024/03</p>
-                <p>Graduation Hackathon @ Waffle College</p>
-              </div>
-              <div class="detailed">
-                <p class="dummy"></p>
-                <p class="detailed_description">
-                  My team developed a web app called Meishi Kakumei / 名刺革命, and won a business award.
-                </p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2024/03</p>
-                <p>Mentor @ <a href="https://www.camp.waffle-waffle.org/">Waffle Camp</a> at Kobe</p>
-              </div>
-              <div class="detailed">
-                <p class="dummy"></p>
-                <p class="detailed_description">I helped middle and high school students create websites.</p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2024/04</p>
-                <p>Teaching Assistant @ <a href="https://www.college.waffle-waffle.org/">Waffle College Entry Course</a></p>
-              </div>
-              <div class="detailed">
-                <p class="dummy"></p>
-                <p class="detailed_description">
-                  I helped female college students who had never programmed before develop apps using Thunkable.
-                </p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2024/05 - Present</p>
-                <p>Volunteer Web Developer @ <a href="https://discovernikkei.org/ja/">Discover Nikkei</a></p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2024/04 - 2024/06</p>
-                <p><a href="https://leaders.life-is-tech.com/">Life is Tech! Leaders</a> 16th</p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2024/09</p>
-                <p>Interviewed by a music writer Dr.Funkshitteru about my band</p>
-              </div>
-              <div class="detailed">
-                <p class="dummy"></p>
-                <p class="detailed_description">
-                  🥁 <a href="https://note.com/drfunk/n/na2c3186dd314">Interview article 1</a>
-                  <br>🥁 <a href="https://note.com/drfunk/n/n01c8bbb3d3c0?magazine_key=m7b7c9e4d763f">Interview article 2</a>
-                </p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2025/06</p>
-                <p>Mentor @ <a href="https://www.camp.waffle-waffle.org/">Waffle Camp</a> at Niigata</p>
-              </div>
-            </div>
-            <div class="info">
-              <div class="date_and_title">
-                <p>2025/06</p>
-                <p>1st place 🥇 @ <a href="https://progate.connpass.com/event/351298/">Progate Women's ハッカソン powered by SmartHR</a></p>
-              </div>
-            </div>
-          </div>       
-        </section>
+        <footer class="site-footer">
+          <p class="copyright">© 2025 Koharu Saeki — All Rights Reserved.</p>
+        </footer>
+      </section>
     </main>
-    <footer>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/koharu-saeki/" target="_blank" rel="noopener noreferrer">Linkedin</a></li>
-            <li><a href="https://github.com/kohapizza" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-            <li><a href="https://qiita.com/kohapizza" target="_blank" rel="noopener noreferrer">Qiita</a></li>
-        </ul>
-        <p>©2025 Koharu Saeki All Rights Reserved.</p>
-    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

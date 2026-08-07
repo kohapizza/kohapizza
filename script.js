@@ -1,85 +1,46 @@
-// スムーススクロールの実装
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-          const header = document.querySelector('header');
-          const headerHeight = header ? header.offsetHeight : 0;
-          const targetTop = target.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({
-              top: targetTop - headerHeight,
-              behavior: 'smooth',
-          });
-      }
+// ──────────────────────────────────────────────
+// Page switching (hash router) — one page at a time
+// ──────────────────────────────────────────────
+const pages = Array.from(document.querySelectorAll('.page'));
+const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
+const pageIds = pages.map(p => p.id);
+const DEFAULT_PAGE = 'home';
+
+function currentPageId() {
+  const id = location.hash.replace('#', '');
+  return pageIds.includes(id) ? id : DEFAULT_PAGE;
+}
+
+function showPage(id) {
+  pages.forEach(p => p.classList.toggle('is-current', p.id === id));
+  navLinks.forEach(a => {
+    a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
   });
-});
-
-let slideIndex = 1; // 現在表示されているスライドのインデックス (1始まり)
-
-document.addEventListener('DOMContentLoaded', function() {
-    // ページ読み込み完了時に最初のスライドを表示
-    showSlides(slideIndex);
-});
-
-// 次へ/前へボタンがクリックされたときに呼び出される関数
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+  // Reset scroll to the top of the new page
+  window.scrollTo(0, 0);
 }
 
-// ドットインジケーターがクリックされたときに呼び出される関数
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+window.addEventListener('hashchange', () => showPage(currentPageId()));
+showPage(currentPageId());
+
+// ──────────────────────────────────────────────
+// Mobile menu toggle (the sidebar is the slide-in panel)
+// ──────────────────────────────────────────────
+const menuBtn = document.querySelector('.responsive_btn');
+const menuPanel = document.querySelector('.sidebar');
+
+function setMenu(open) {
+  menuPanel.classList.toggle('menu_active', open);
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  menuBtn.textContent = open ? '×' : '☰';
 }
 
-// スライドを表示・非表示を切り替えるメイン関数
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-
-    // スライドが最後の次や最初の前に行った場合の調整
-    if (n > slides.length) {
-        slideIndex = 1; // 最後のスライドの次なら最初のスライドに戻る
-    }
-    if (n < 1) {
-        slideIndex = slides.length; // 最初のスライドの前なら最後のスライドに行く
-    }
-
-    // 全てのスライドを非表示にする
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    // 全てのドットから "active" クラスを削除する
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-
-    // 現在のスライドを表示する
-    slides[slideIndex-1].style.display = "block"; // 配列のインデックスは0始まりなので -1 する
-
-    // 現在のドットに "active" クラスを追加する
-    dots[slideIndex-1].className += " active";
+if (menuBtn && menuPanel) {
+  menuBtn.addEventListener('click', () => {
+    setMenu(!menuPanel.classList.contains('menu_active'));
+  });
+  // Close the menu when a page link is tapped
+  document.querySelectorAll('[data-nav]').forEach(link => {
+    link.addEventListener('click', () => setMenu(false));
+  });
 }
-
-const responsive_menu_btn = document.querySelector('.responsive_btn');
-responsive_menu_btn.addEventListener('click', menuToggle);
-
-function menuToggle() {
-    const nav = document.querySelector('header nav');
-    const active = nav.classList.toggle('menu_active');
-    // ARIAとボタン表示の同期
-    responsive_menu_btn.setAttribute('aria-expanded', active ? 'true' : 'false');
-    responsive_menu_btn.textContent = active ? '×' : '☰';
-}
-
-document.querySelectorAll('header nav ul li a').forEach(link => {
-    link.addEventListener('click', () => {
-        const nav = document.querySelector('header nav');
-        nav.classList.remove('menu_active');
-        // ARIAとボタン表示の同期
-        responsive_menu_btn.setAttribute('aria-expanded', 'false');
-        responsive_menu_btn.textContent = '☰';
-    });
-});
