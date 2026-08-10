@@ -52,11 +52,6 @@ body {
 a { color: inherit; }
 
 /* ==========================================================================
-   English only — Japanese variants are always hidden
-   ========================================================================== */
-.only-ja { display: none !important; }
-
-/* ==========================================================================
    SIDEBAR (fixed, left) — wider column
    ========================================================================== */
 .sidebar {
@@ -263,7 +258,6 @@ main {
   color: var(--ink);
   margin-bottom: 28px;
 }
-.hero-headline .only-ja { line-height: 1.5; letter-spacing: 0.01em; }
 
 .hero-lead {
   font-size: 1.25rem;
