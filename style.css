@@ -259,6 +259,18 @@ main {
   margin-bottom: 28px;
 }
 
+/* The greeting sits on its own line, quieter than the name below it */
+.hero-greeting {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 0.42em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
 .hero-lead {
   font-size: 1.25rem;
   color: var(--text);
