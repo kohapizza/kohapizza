@@ -392,6 +392,30 @@ main {
   color: var(--muted);
 }
 
+/* ── SECTION PHOTO ──────────────────────────────────── */
+.section-body > p.section-lead {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.section-body > p.section-note { font-weight: 500; }
+
+.section-photo {
+  width: min(560px, 100%);
+  margin: 0 0 28px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line-soft);
+  box-shadow: 0 10px 34px rgba(8, 19, 26, 0.10);
+}
+.section-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ── VIDEO EMBED ────────────────────────────────────── */
 .video {
   position: relative;
